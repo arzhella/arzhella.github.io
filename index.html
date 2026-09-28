@@ -104,20 +104,13 @@
             border-radius: 8px;
         }
 
-        .cover-placeholder {
+        .book-cover {
             width: 240px;
             height: 350px;
+            object-fit: cover;
+            display: block;
             margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 25px;
-            background: #2a1d26;
-            border: 1px solid #59404d;
-            color: #c78ca3;
-            font-size: 1.3rem;
-            letter-spacing: 2px;
+            border-radius: 5px;
         }
 
         .book h3 {
@@ -169,7 +162,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .cover-placeholder {
+            .book-cover {
                 width: 220px;
                 height: 320px;
             }
@@ -214,10 +207,10 @@
 
             <div class="book">
 
-                <div class="cover-placeholder">
-                    NO LABEL,<br>
-                    JUST US
-                </div>
+                <img
+                    src="no-label-just-us.png"
+                    alt="No Label, JUST US cover"
+                    class="book-cover">
 
                 <h3>No Label, JUST US</h3>
 
@@ -245,10 +238,10 @@
 
             <div class="book">
 
-                <div class="cover-placeholder">
-                    THE SECRET<br>
-                    MISTRESS
-                </div>
+                <img
+                    src="the-secret-mistress.png"
+                    alt="The Secret Mistress cover"
+                    class="book-cover">
 
                 <h3>The Secret Mistress</h3>
 
