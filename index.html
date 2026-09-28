@@ -13,149 +13,253 @@
             padding: 0;
         }
 
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #120d12;
-            color: #f5e9ed;
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #0d080c;
+            color: #f8edf1;
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 40px;
+            background: rgba(13, 8, 12, 0.88);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #34202b;
+        }
+
+        nav .nav-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #e5a9bd;
+            font-size: 1.3rem;
+            letter-spacing: 4px;
+        }
+
+        nav a {
+            color: #d8cbd0;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e5a9bd;
+        }
+
+        /* HERO */
+
         header {
-            min-height: 80vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 120px 20px 80px;
+
             background:
-                radial-gradient(circle at center, #512c40, #120d12 70%);
+                radial-gradient(
+                    circle at center,
+                    #5a3046 0%,
+                    #24131d 38%,
+                    #0d080c 75%
+                );
         }
 
         .hero {
-            max-width: 800px;
+            max-width: 850px;
+        }
+
+        .small-title {
+            color: #d99caf;
+            letter-spacing: 6px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
-            letter-spacing: 10px;
+            font-size: 5.5rem;
+            letter-spacing: 15px;
+            font-weight: normal;
             margin-bottom: 10px;
         }
 
-        .tagline {
-            color: #d9a9b9;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-
         .hero h2 {
-            margin-top: 80px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: normal;
+            font-style: italic;
+            color: #ead4dc;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            max-width: 600px;
-            margin: 20px auto 30px;
-            color: #d8cbd0;
-            font-size: 1.1rem;
+            max-width: 650px;
+            margin: auto;
+            color: #cbbcc3;
+            font-size: 1.05rem;
         }
 
         .button {
             display: inline-block;
-            padding: 13px 28px;
-            margin-top: 15px;
+            padding: 13px 30px;
+            margin-top: 30px;
             border: 1px solid #c78ca3;
-            color: white;
+            color: #fff;
             text-decoration: none;
             letter-spacing: 2px;
+            font-size: 0.85rem;
             transition: 0.3s;
         }
 
         .button:hover {
             background: #c78ca3;
-            color: #120d12;
+            color: #160c12;
         }
+
+        /* SECTIONS */
 
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 90px 25px;
+            padding: 100px 25px;
         }
 
-        section > h2 {
+        .section-title {
             text-align: center;
-            font-size: 2.4rem;
-            font-weight: normal;
-            letter-spacing: 4px;
-            margin-bottom: 55px;
+            margin-bottom: 60px;
         }
+
+        .section-title span {
+            color: #d99caf;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: 2.7rem;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+
+        /* STORIES */
 
         .books {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+            gap: 45px;
         }
 
         .book {
-            background: #1c131b;
-            border: 1px solid #3b2632;
+            background: linear-gradient(145deg, #21141d, #140c11);
+            border: 1px solid #3c2531;
             padding: 35px;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .book:hover {
+            transform: translateY(-8px);
+            border-color: #8f596f;
         }
 
         .book-cover {
-            width: 240px;
-            height: 350px;
+            width: 260px;
+            height: 380px;
             object-fit: cover;
             display: block;
             margin: 0 auto 30px;
             border-radius: 5px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.55);
         }
 
         .book h3 {
             font-size: 2rem;
-            margin-bottom: 10px;
+            font-weight: normal;
+            margin-bottom: 8px;
         }
 
         .genre {
-            color: #c78ca3;
-            font-size: 0.85rem;
+            color: #d99caf;
+            font-size: 0.78rem;
             letter-spacing: 1.5px;
             margin-bottom: 20px;
         }
 
         .book p {
-            color: #d8cbd0;
-            margin-bottom: 15px;
+            color: #cbbcc3;
+            font-size: 0.95rem;
         }
+
+        /* ABOUT */
 
         .about {
+            max-width: 750px;
             text-align: center;
-            max-width: 700px;
         }
 
-        .about p {
-            color: #d8cbd0;
+        .about-text {
+            color: #cbbcc3;
             font-size: 1.05rem;
         }
 
+        .signature {
+            margin-top: 30px;
+            color: #d99caf;
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
+        /* FOOTER */
+
         footer {
             text-align: center;
-            padding: 35px 20px;
-            border-top: 1px solid #3b2632;
-            color: #9f8992;
+            padding: 45px 20px;
+            border-top: 1px solid #34202b;
+            color: #897781;
+            font-size: 0.85rem;
         }
+
+        /* MOBILE */
 
         @media (max-width: 750px) {
 
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 0.7rem;
+            }
+
             .hero h1 {
-                font-size: 2.7rem;
-                letter-spacing: 6px;
+                font-size: 3rem;
+                letter-spacing: 8px;
             }
 
             .hero h2 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .books {
@@ -163,8 +267,16 @@
             }
 
             .book-cover {
-                width: 220px;
-                height: 320px;
+                width: 230px;
+                height: 335px;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -172,20 +284,45 @@
 
 <body>
 
-    <header>
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="nav-inner">
+
+            <div class="logo">
+                ARZHELLA
+            </div>
+
+            <div>
+                <a href="#home">HOME</a>
+                <a href="#stories">STORIES</a>
+                <a href="#about">ABOUT</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header id="home">
+
         <div class="hero">
 
-            <h1>ARZHELLA</h1>
-
-            <div class="tagline">
+            <div class="small-title">
                 Author • Storyteller
             </div>
 
-            <h2>✦ Welcome to My World ✦</h2>
+            <h1>ARZHELLA</h1>
+
+            <h2>
+                Where love has secrets...
+            </h2>
 
             <p>
-                Stories of love, secrets, complicated relationships,
-                and the choices that change everything.
+                Welcome to my little corner of stories —
+                where love gets complicated, secrets refuse to stay hidden,
+                and every choice has a consequence.
             </p>
 
             <a href="#stories" class="button">
@@ -193,12 +330,22 @@
             </a>
 
         </div>
+
     </header>
 
 
+    <!-- STORIES -->
+
     <section id="stories">
 
-        <h2>✦ My Stories ✦</h2>
+        <div class="section-title">
+
+            <span>From my imagination</span>
+
+            <h2>My Stories</h2>
+
+        </div>
+
 
         <div class="books">
 
@@ -263,25 +410,37 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-    <section class="about">
+    <!-- ABOUT -->
 
-        <h2>✦ About the Author ✦</h2>
+    <section id="about" class="about">
 
-        <p>
-            Welcome to my little corner of the internet.
+        <div class="section-title">
+
+            <span>A little about me</span>
+
+            <h2>The Author</h2>
+
+        </div>
+
+        <p class="about-text">
             I'm Arzhella, a storyteller who loves creating
-            characters, emotions, secrets, and complicated
-            stories about love.
+            complicated characters, intense emotions, hidden secrets,
+            and stories about love that don't always follow the rules.
         </p>
+
+        <div class="signature">
+            — Arzhella
+        </div>
 
     </section>
 
+
+    <!-- FOOTER -->
 
     <footer>
 
